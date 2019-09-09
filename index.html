@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dave's Recipe Serving Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="recipe-cal">
+            <div class="recipe-cal-bg">
+                <form>
+                    <div class="form-group">
+                        <h2>Recipe Size Calculator</h2>
+                        <p>Need to make bigger servings? Use this calculator to up the game when you need more to fill your plate.</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-text">What's the Recipe called?</label>
+                        <input class="form-control" maxlength="100" name="recipeName" required="true" type="text" value placeholder="Recipe Name" autocomplete="off">
+
+                    </div>
+
+
+                    <div class="container-fluid text-center">
+
+                        <div class="row">
+                            <div class="form-group col-xs-4">
+                                <label class="form-text">Original recipe servings</label>
+                                <input type="number" min="0" inputmode="numeric" pattern="[0-9]*" name="originalServ" class="form-control" required="true" value placeholder="" autocomplete="off">
+                            </div>
+                            <div class="form-group col-xs-4">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </div>
+                            <div class="form-group col-xs-4">
+                                <label class="form-text">Needed Servings</label>
+                                <input type="number" min="0" inputmode="numeric" pattern="[0-9]*" name="resizeServ" class="form-control" required="true" value="" placeholder="" autocomplete="off">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h3>Ingredients</h3>
+                        <p>Please enter the ingredients of your recipe. If you need to add more, click the plus button below.</p>
+                    </div>
+                    <div class="form-group">
+                        <div class="ingredient-list-header">
+                            <ul>
+                                <li>Qty</li>
+                                <li>Measurement</li>
+                                <li>Ingredient</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="ingredient-item-row">
+                        <div class="form__control-container"> <input type="number" min="0" inputmode="numeric" pattern="[0-9]*" name="ingredientQty" class="form__control qty-input"></div>
+                        <div class="form__control-container"> <select name="ingredientMeasurement" class="form__control measurement-input">
+                                <option value="SelectMeasurement">Pick type</option>
+                                <optgroup label="----Solids----">
+                                    <option value="Cups2">Cups</option>
+                                    <option value="Dashes2">Dashes</option>
+                                    <option value="Ounces1">Ounces</option>
+                                    <option value="Pinches2">Pinches</option>
+                                    <option value="Tablespoons2">Tablespoons</option>
+                                    <option value="Teaspoons2">Teaspoons</option>
+                                    <option value="Pounds1">Pounds</option>
+                                    <option value="Each0">Each</option>
+                                </optgroup>
+                                <optgroup label="----Liquids----">
+                                    <option value="Cups3">Cups</option>
+                                    <option value="Drops3">Drops</option>
+                                    <option value="Gallons3">Gallons</option>
+                                    <option value="Ounces3">Ounces</option>
+                                    <option value="Pints3">Pints</option>
+                                    <option value="Quarts3">Quarts</option>
+                                    <option value="Tablespoons3">Tablespoons</option>
+                                    <option value="Teaspoons3">Teaspoons</option>
+                                </optgroup>
+                            </select> <i class="icon-down-micro form__control-icon form__control-icon--lg"></i></div>
+                        <div class="form__control-container"> <input type="text" name="ingredientName" class="form__control ingredient-input"></div>
+                    </div>
+                    <div class="ingredient-item-row">
+                        <div class="form__control-container"> <input type="number" min="0" inputmode="numeric" pattern="[0-9]*" name="ingredientQty" class="form__control qty-input"></div>
+                        <div class="form__control-container"> <select name="ingredientMeasurement" class="form__control measurement-input">
+                                <option value="SelectMeasurement">Pick type</option>
+                                <optgroup label="----Solids----">
+                                    <option value="Cups2">Cups</option>
+                                    <option value="Dashes2">Dashes</option>
+                                    <option value="Ounces1">Ounces</option>
+                                    <option value="Pinches2">Pinches</option>
+                                    <option value="Tablespoons2">Tablespoons</option>
+                                    <option value="Teaspoons2">Teaspoons</option>
+                                    <option value="Pounds1">Pounds</option>
+                                    <option value="Each0">Each</option>
+                                </optgroup>
+                                <optgroup label="----Liquids----">
+                                    <option value="Cups3">Cups</option>
+                                    <option value="Drops3">Drops</option>
+                                    <option value="Gallons3">Gallons</option>
+                                    <option value="Ounces3">Ounces</option>
+                                    <option value="Pints3">Pints</option>
+                                    <option value="Quarts3">Quarts</option>
+                                    <option value="Tablespoons3">Tablespoons</option>
+                                    <option value="Teaspoons3">Teaspoons</option>
+                                </optgroup>
+                            </select> <i class="icon-down-micro form__control-icon form__control-icon--lg"></i></div>
+                        <div class="form__control-container"> <input type="text" name="ingredientName" class="form__control ingredient-input"></div>
+                    </div>
+                    <div class="ingredient-item-row">
+                        <div class=""> <input type="number" min="0" inputmode="numeric" pattern="[0-9]*" name="ingredientQty" class="form-control qty-input"></div>
+                        <div class="form-control"> <select name="ingredientMeasurement" class="form__control measurement-input">
+                                <option value="SelectMeasurement">Pick type</option>
+                                <optgroup label="----Solids----">
+                                    <option value="Cups2">Cups</option>
+                                    <option value="Dashes2">Dashes</option>
+                                    <option value="Ounces1">Ounces</option>
+                                    <option value="Pinches2">Pinches</option>
+                                    <option value="Tablespoons2">Tablespoons</option>
+                                    <option value="Teaspoons2">Teaspoons</option>
+                                    <option value="Pounds1">Pounds</option>
+                                    <option value="Each0">Each</option>
+                                </optgroup>
+                                <optgroup label="----Liquids----">
+                                    <option value="Cups3">Cups</option>
+                                    <option value="Drops3">Drops</option>
+                                    <option value="Gallons3">Gallons</option>
+                                    <option value="Ounces3">Ounces</option>
+                                    <option value="Pints3">Pints</option>
+                                    <option value="Quarts3">Quarts</option>
+                                    <option value="Tablespoons3">Tablespoons</option>
+                                    <option value="Teaspoons3">Teaspoons</option>
+                                </optgroup>
+                            </select> <i class="icon-down-micro form__control-icon form__control-icon--lg"></i></div>
+                        <div class="form__control-container"> <input type="text" name="ingredientName" class="form__control ingredient-input"></div>
+                    </div>
+                    <div class="ingredient-item-row">
+                        <div class="form__control-container"> <input type="number" min="0" inputmode="numeric" pattern="[0-9]*" name="ingredientQty" class="form__control qty-input"></div>
+                        <div class="form__control-container"> <select name="ingredientMeasurement" class="form__control measurement-input">
+                                <option value="SelectMeasurement">Pick type</option>
+                                <optgroup label="----Solids----">
+                                    <option value="Cups2">Cups</option>
+                                    <option value="Dashes2">Dashes</option>
+                                    <option value="Ounces1">Ounces</option>
+                                    <option value="Pinches2">Pinches</option>
+                                    <option value="Tablespoons2">Tablespoons</option>
+                                    <option value="Teaspoons2">Teaspoons</option>
+                                    <option value="Pounds1">Pounds</option>
+                                    <option value="Each0">Each</option>
+                                </optgroup>
+                                <optgroup label="----Liquids----">
+                                    <option value="Cups3">Cups</option>
+                                    <option value="Drops3">Drops</option>
+                                    <option value="Gallons3">Gallons</option>
+                                    <option value="Ounces3">Ounces</option>
+                                    <option value="Pints3">Pints</option>
+                                    <option value="Quarts3">Quarts</option>
+                                    <option value="Tablespoons3">Tablespoons</option>
+                                    <option value="Teaspoons3">Teaspoons</option>
+                                </optgroup>
+                            </select> <i class="icon-down-micro form__control-icon form__control-icon--lg"></i></div>
+                        <div class="form__control-container"> <input type="text" name="ingredientName" class="form__control ingredient-input"></div>
+                    </div>
+                    <div class="ingredInput addMore">
+                        <h4><i class="icon-plus"></i> Add Ingredient</h4>
+                    </div>
+                    <div class="resizer-form__group resizer-form__group--action">
+                        <button type="button" value="Resize" class="btn btn-info btn-large btnResize" id="submitButton">Resize Recipe</button>
+                        <button type="reset" value="Clear" class="btn btn-light btnClear btn-large">Clear</button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
